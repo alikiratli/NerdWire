@@ -2,19 +2,10 @@
 FROM maven:3.8.4-openjdk-17-slim AS build
 WORKDIR /app
 
-# Copy only pom.xml and mvnw files first to leverage Docker layer caching
-COPY pom.xml .
-COPY .mvn/ .mvn/
-COPY mvnw mvnw
-COPY mvnw.cmd mvnw.cmd
+# Copy the project directory contents
+COPY NerdWire/ .
 
-# Download dependencies (this layer will be cached if pom.xml doesn't change)
-RUN ./mvnw dependency:go-offline
-
-# Now copy the source code
-COPY src/ src/
-
-# Package the application
+# Build the application
 RUN ./mvnw clean package -DskipTests
 
 # Run stage
