@@ -2,15 +2,20 @@
 FROM maven:3.8.4-openjdk-17-slim AS build
 WORKDIR /app
 
+# Copy Maven wrapper files first
+COPY mvnw .
+COPY mvnw.cmd .
+COPY .mvn .mvn
+
+# Set execute permission for mvnw
+RUN chmod +x mvnw
+
 # Copy project files
-COPY ../pom.xml .
-COPY ../.mvn/ .mvn/
-COPY ../mvnw mvnw
-COPY ../mvnw.cmd mvnw.cmd
-COPY main/ src/main/
+COPY pom.xml .
+COPY src/ src/
 
 # Build the application
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # Run stage
 FROM eclipse-temurin:17-jdk-alpine
