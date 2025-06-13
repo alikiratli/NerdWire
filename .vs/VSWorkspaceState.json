@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\NerdWire",
+    "\\NerdWire\\src",
+    "\\NerdWire\\src\\main",
+    "\\NerdWire\\src\\main\\java",
+    "\\NerdWire\\src\\main\\java\\org",
+    "\\NerdWire\\src\\main\\java\\org\\nerdwire",
+    "\\NerdWire\\src\\main\\java\\org\\nerdwire\\bot",
+    "\\NerdWire\\src\\main\\java\\org\\nerdwire\\bot\\service",
+    "\\NerdWire\\src\\main\\java\\org\\nerdwire\\bot\\service\\telegram"
+  ],
+  "SelectedNode": "\\NerdWire\\pom.xml",
+  "PreviewInSolutionExplorer": false
+}

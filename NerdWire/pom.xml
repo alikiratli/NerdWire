@@ -51,5 +51,10 @@
             <version>3.2.6</version>
             <optional>true</optional>
         </dependency>
+		<dependency>
+			<groupId>com.github.pengrad</groupId>
+			<artifactId>java-telegram-bot-api</artifactId>
+			<version>6.1.0</version>
+		</dependency>
     </dependencies>
 </project>
