@@ -23,5 +23,7 @@ public class NerdWireApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(NerdWireApplication.class, args);
+        String token = System.getenv("BOT_TOKEN");
+        TelegramBot bot = new TelegramBot(token);
     }
 }
