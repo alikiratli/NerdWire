@@ -26,7 +26,7 @@ RUN apk add --no-cache tzdata
 ENV TZ=Europe/Istanbul
 
 # Create volume for temporary files
-VOLUME /tmp
+//VOLUME /tmp
 
 # Copy the built jar from build stage
 COPY --from=build /app/target/*.jar app.jar
